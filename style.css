@@ -5,12 +5,14 @@
   margin: 0;
   padding: 0;
 }
+body {
+  overflow-x: hidden;
+}
 .wrap {
   width: 100vw;
   max-width: 100vw;
   background-color: #111;
   font-family: "Rubik", sans-serif;
-  overflow-x: hidden;
 }
 
 /* header */
@@ -91,4 +93,60 @@ li {
 }
 .main__arrow i {
   cursor: pointer;
+}
+
+/* Fight of the day section */
+.dayFight {
+  height: 100vh;
+  position: relative;
+}
+.dayFight__h1 {
+  padding-top: 110px;
+  font-size: 50px;
+  color: #eee;
+  text-align: center;
+}
+.dayFight__video {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-40%);
+  height: 600px;
+  width: 850px;
+}
+.dayFight__video iframe {
+  height: 100%;
+  width: 100%;
+}
+.dayFight__description {
+  position: absolute;
+  top: 50%;
+  right: 100px;
+  width: 800px;
+  transform: translateY(-40%);
+  color: #eee;
+  text-align: center;
+}
+.dayFight__h2 {
+  font-size: 35px;
+  padding-bottom: 20px;
+}
+.dayFight__text {
+  text-align: left;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+/* videos section */
+.videos {
+  display: flex;
+  flex-direction: column;
+  color: #eee;
+}
+.videos--container {
+  width: 100%;
+  height: 300px;
+}
+.videos__canelo {
+  margin-top: 100px;
 }
