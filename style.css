@@ -148,7 +148,7 @@ li {
   height: 300px;
 }
 .videos__h1 {
-  margin-left: 70px;
+  margin-left: 50px;
   font-size: 20px;
 }
 .videos__canelo {
@@ -163,7 +163,4 @@ li {
 }
 .videos__element p {
   padding-top: 5px;
-}
-.videos__caneloAngulo {
-  margin-left: 60px;
 }
