@@ -7,6 +7,7 @@
 }
 ::-webkit-scrollbar {
   width: 10px;
+  height: 0px;
   background-color: #111;
 }
 ::-webkit-scrollbar-thumb {
@@ -164,6 +165,8 @@ li {
 }
 .videos__list {
   display: flex;
+  position: relative;
+  overflow-x: scroll;
 }
 .videos__element {
   padding-top: 20px;
@@ -172,7 +175,14 @@ li {
 .videos__element p {
   padding-top: 5px;
 }
-
+.rightArrow {
+  position: absolute;
+  top: 50%;
+  right: 1%;
+  transform: translateY(-50%);
+  font-size: 60px;
+  display: none;
+}
 /* footer */
 .footer {
   height: 100px;
