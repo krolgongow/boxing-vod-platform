@@ -171,9 +171,11 @@ li {
 .videos__element {
   padding-top: 20px;
   margin-left: 20px;
+  cursor: pointer;
 }
 .videos__element p {
   padding-top: 5px;
+  margin-bottom: 5px;
 }
 .rightArrow {
   position: absolute;
