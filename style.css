@@ -153,6 +153,7 @@ li {
   color: #eee;
 }
 .videos--container {
+  position: relative;
   width: 100%;
   height: 300px;
 }
@@ -167,6 +168,31 @@ li {
   display: flex;
   position: relative;
   overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+.videos__canelo:hover .rightArrow,
+.videos__canelo:hover .leftArrow,
+.videos__joshua:hover .rightArrow,
+.videos__joshua:hover .leftArrow,
+.videos__fury:hover .rightArrow,
+.videos__fury:hover .leftArrow,
+.videos__ggg:hover .rightArrow,
+.videos__ggg:hover .leftArrow,
+.videos__usyk:hover .rightArrow,
+.videos__usyk:hover .leftArrow,
+.videos__wilder:hover .rightArrow,
+.videos__wilder:hover .leftArrow,
+.videos__loma:hover .rightArrow,
+.videos__loma:hover .leftArrow,
+.videos__crawford:hover .rightArrow,
+.videos__crawford:hover .leftArrow,
+.videos__errol:hover .rightArrow,
+.videos__errol:hover .leftArrow,
+.videos__manny:hover .rightArrow,
+.videos__manny:hover .leftArrow,
+.videos__floyd:hover .rightArrow,
+.videos__floyd:hover .leftArrow {
+  display: block;
 }
 .videos__element {
   padding-top: 20px;
@@ -177,13 +203,25 @@ li {
   padding-top: 5px;
   margin-bottom: 5px;
 }
-.rightArrow {
+.arrow {
   position: absolute;
   top: 50%;
-  right: 1%;
-  transform: translateY(-50%);
-  font-size: 60px;
+  transform: translateY(-65%);
+  font-size: 50px;
   display: none;
+  color: #eee;
+  z-index: 3;
+  cursor: pointer;
+  transition: 0.1s linear;
+}
+.arrow:hover {
+  color: rgb(241, 241, 0);
+}
+.rightArrow {
+  right: 1%;
+}
+.leftArrow {
+  left: 1%;
 }
 /* footer */
 .footer {
