@@ -12,6 +12,7 @@ const footerSection = document.querySelector(".footer");
 const leftArrows = [...document.querySelectorAll(".leftArrow")];
 const rightArrows = [...document.querySelectorAll(".rightArrow")];
 const videosLists = [...document.querySelectorAll(".videos__list")];
+const videosElementList = [...document.querySelectorAll(".videos__element")];
 
 homeBtn.addEventListener("click", () => {
   mainSection.scrollIntoView({ behavior: "smooth" });
@@ -39,4 +40,12 @@ rightArrows.forEach(function (arrow, index) {
   arrow.addEventListener("click", function () {
     videosLists[index].scrollLeft += 1500;
   });
+});
+
+videosElementList.forEach(function (el) {
+  const playBtn = document.createElement("i");
+  playBtn.classList.add("fas");
+  playBtn.classList.add("fa-play-circle");
+  playBtn.classList.add("playBtn");
+  el.appendChild(playBtn);
 });

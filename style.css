@@ -170,34 +170,22 @@ li {
   overflow-x: scroll;
   scroll-behavior: smooth;
 }
-.videos__canelo:hover .rightArrow,
-.videos__canelo:hover .leftArrow,
-.videos__joshua:hover .rightArrow,
-.videos__joshua:hover .leftArrow,
-.videos__fury:hover .rightArrow,
-.videos__fury:hover .leftArrow,
-.videos__ggg:hover .rightArrow,
-.videos__ggg:hover .leftArrow,
-.videos__usyk:hover .rightArrow,
-.videos__usyk:hover .leftArrow,
-.videos__wilder:hover .rightArrow,
-.videos__wilder:hover .leftArrow,
-.videos__loma:hover .rightArrow,
-.videos__loma:hover .leftArrow,
-.videos__crawford:hover .rightArrow,
-.videos__crawford:hover .leftArrow,
-.videos__errol:hover .rightArrow,
-.videos__errol:hover .leftArrow,
-.videos__manny:hover .rightArrow,
-.videos__manny:hover .leftArrow,
-.videos__floyd:hover .rightArrow,
-.videos__floyd:hover .leftArrow {
+.videos--container:hover .rightArrow,
+.videos--container:hover .leftArrow {
   display: block;
 }
 .videos__element {
+  position: relative;
   padding-top: 20px;
   margin-left: 20px;
   cursor: pointer;
+  transition: 0.1s;
+}
+.videos__element:hover {
+  opacity: 0.7;
+}
+.videos__element:hover .playBtn {
+  display: block;
 }
 .videos__element p {
   padding-top: 5px;
@@ -222,6 +210,22 @@ li {
 }
 .leftArrow {
   left: 1%;
+}
+.playBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  display: none;
+}
+.overlay {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(10, 10, 10, 0.85);
+  z-index: 4;
+  display: none;
 }
 /* footer */
 .footer {
