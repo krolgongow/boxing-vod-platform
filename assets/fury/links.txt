@@ -1,8 +1,8 @@
-chisora2: d4K3_eA8TOM
-cunningham: _LE4pSd1OUg
-klitschko: I0hqcAcIvbY
-schwarz: rDWaABDWoa4
-seferi: RcmvVE5k4M4
-wallin: cUOhFTZGF4w
-wilder: QASG4p5yrxI
-wilder2: GDM-ov7ZR40
+"furychisora2": "d4K3_eA8TOM",
+"furycunningham": "_LE4pSd1OUg",
+"furyklitschko": "I0hqcAcIvbY",
+"furyschwarz": "rDWaABDWoa4",
+"furyseferi": "RcmvVE5k4M4",
+"furywallin": "cUOhFTZGF4w",
+"furywilder": "QASG4p5yrxI",
+"furywilder2": "GDM-ov7ZR40",
