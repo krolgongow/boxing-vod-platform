@@ -23,7 +23,7 @@ const creatingPlayer = function () {
     el.addEventListener("click", function () {
       iframeVideo.setAttribute(
         "src",
-        `https://www.youtube-nocookie.com/embed/${links[index]}`
+        `https://www.youtube-nocookie.com/embed/${links[index]}?autoplay=1`
       );
       overlay.classList.add("on");
       // overlayVideo.insertAdjacentHTML("beforeend", html);
