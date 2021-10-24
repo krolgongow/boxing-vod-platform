@@ -38,6 +38,11 @@ const preparingLinks = function () {
     .then(creatingPlayer());
 };
 
+const cancelVideo = function () {
+  overlay.classList.remove("on");
+  iframeVideo.removeAttribute("src");
+};
+
 preparingLinks();
 
 videosElementList.forEach(function (el) {
@@ -63,9 +68,11 @@ aboutBtn.addEventListener("click", () => {
 moreBtn.addEventListener("click", () => {
   fotdSection.scrollIntoView({ behavior: "smooth" });
 });
-overlay.addEventListener("click", function () {
-  overlay.classList.remove("on");
-  iframeVideo.removeAttribute("src");
+overlay.addEventListener("click", cancelVideo);
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    cancelVideo();
+  }
 });
 leftArrows.forEach(function (arrow, index) {
   arrow.addEventListener("click", function () {
