@@ -9,10 +9,44 @@ const mainSection = document.querySelector(".main");
 const fotdSection = document.querySelector(".dayFight");
 const fightersSection = document.querySelector(".videos");
 const footerSection = document.querySelector(".footer");
+const overlay = document.querySelector(".overlay");
+const overlayVideo = document.querySelector(".overlay__video");
+const iframeVideo = document.querySelector(".overlay__video iframe");
 const leftArrows = [...document.querySelectorAll(".leftArrow")];
 const rightArrows = [...document.querySelectorAll(".rightArrow")];
 const videosLists = [...document.querySelectorAll(".videos__list")];
 const videosElementList = [...document.querySelectorAll(".videos__element")];
+let links;
+
+const creatingPlayer = function () {
+  videosElementList.forEach(function (el, index) {
+    el.addEventListener("click", function () {
+      iframeVideo.setAttribute(
+        "src",
+        `https://www.youtube-nocookie.com/embed/${links[index]}`
+      );
+      overlay.classList.add("on");
+      // overlayVideo.insertAdjacentHTML("beforeend", html);
+    });
+  });
+};
+
+const preparingLinks = function () {
+  fetch("assets/links.json")
+    .then((response) => response.json())
+    .then((response) => (links = Object.values(response)))
+    .then(creatingPlayer());
+};
+
+preparingLinks();
+
+videosElementList.forEach(function (el) {
+  const playBtn = document.createElement("i");
+  playBtn.classList.add("fas");
+  playBtn.classList.add("fa-play-circle");
+  playBtn.classList.add("playBtn");
+  el.appendChild(playBtn);
+});
 
 homeBtn.addEventListener("click", () => {
   mainSection.scrollIntoView({ behavior: "smooth" });
@@ -29,7 +63,10 @@ aboutBtn.addEventListener("click", () => {
 moreBtn.addEventListener("click", () => {
   fotdSection.scrollIntoView({ behavior: "smooth" });
 });
-
+overlay.addEventListener("click", function () {
+  overlay.classList.remove("on");
+  iframeVideo.removeAttribute("src");
+});
 leftArrows.forEach(function (arrow, index) {
   arrow.addEventListener("click", function () {
     videosLists[index].scrollLeft -= 1500;
@@ -40,12 +77,4 @@ rightArrows.forEach(function (arrow, index) {
   arrow.addEventListener("click", function () {
     videosLists[index].scrollLeft += 1500;
   });
-});
-
-videosElementList.forEach(function (el) {
-  const playBtn = document.createElement("i");
-  playBtn.classList.add("fas");
-  playBtn.classList.add("fa-play-circle");
-  playBtn.classList.add("playBtn");
-  el.appendChild(playBtn);
 });
