@@ -5,6 +5,8 @@ const fotdBtn = document.querySelector(".header__fotd");
 const fightersBtn = document.querySelector(".header__fighters");
 const aboutBtn = document.querySelector(".header__about");
 const moreBtn = document.querySelector(".main__arrow");
+const hamburgerBtn = document.querySelector(".hamburger");
+const headerList = document.querySelector(".header__list");
 const mainSection = document.querySelector(".main");
 const fotdSection = document.querySelector(".dayFight");
 const fightersSection = document.querySelector(".videos");
@@ -72,6 +74,15 @@ overlay.addEventListener("click", cancelVideo);
 document.addEventListener("keydown", function (e) {
   if (e.key === "Escape") {
     cancelVideo();
+  }
+});
+hamburgerBtn.addEventListener("click", function () {
+  if (headerList.classList.contains("on")) {
+    headerList.classList.remove("on");
+    headerList.classList.add("off");
+  } else {
+    headerList.classList.remove("off");
+    headerList.classList.add("on");
   }
 });
 leftArrows.forEach(function (arrow, index) {
