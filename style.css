@@ -1,5 +1,3 @@
-/* font-family: 'Rubik', sans-serif; */
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -50,7 +48,7 @@ body {
 /* header */
 .header {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   top: 0;
@@ -224,7 +222,7 @@ li {
   font-size: 50px;
   display: none;
   color: #eee;
-  z-index: 3;
+  z-index: 1;
   cursor: pointer;
   transition: 0.1s linear;
 }
@@ -271,7 +269,7 @@ li {
     font-size: 18px;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   .header__list {
     position: absolute;
     width: 100vw;
@@ -350,5 +348,167 @@ li {
     left: 50%;
     transform: translateX(-50%);
     width: 80vw;
+  }
+  .videos__element:hover .playBtn {
+    display: none;
+  }
+  .videos__element:hover {
+    opacity: 1;
+  }
+}
+@media (max-width: 415px) {
+  .main__h1 {
+    padding-top: 200px;
+    padding-left: 50px;
+    font-size: 50px;
+  }
+  .main__h2 {
+    padding-top: 40px;
+    padding-left: 50px;
+    font-size: 20px;
+  }
+  .dayFight__h1 {
+    padding-top: 90px;
+    font-size: 30px;
+  }
+  .dayFight__video {
+    height: 45vw;
+    width: 70vw;
+  }
+  .dayFight__description {
+    top: 50%;
+    left: 50%;
+    width: 70vw;
+  }
+  .dayFight__h2 {
+    font-size: 25px;
+  }
+  .dayFight__text {
+    font-size: 18px;
+  }
+  .videos {
+    margin-top: 220px;
+  }
+}
+@media (max-width: 376px) {
+  .dayFight__h2 {
+    font-size: 20px;
+  }
+  .dayFight__text {
+    font-size: 15px;
+  }
+}
+@media (max-width: 321px) {
+  .main__h1 {
+    padding-top: 180px;
+    padding-left: 30px;
+    font-size: 45px;
+  }
+  .main__h2 {
+    padding-top: 40px;
+    padding-left: 30px;
+    font-size: 18px;
+  }
+  .dayFight__h1 {
+    padding-top: 80px;
+    font-size: 25px;
+  }
+  .dayFight__video {
+    margin-top: 20px;
+  }
+  .dayFight__h2 {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .dayFight__text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1025px) and (orientation: landscape) {
+  .dayFight__h1 {
+    font-size: 35px;
+    padding-top: 100px;
+    padding-bottom: 20px;
+  }
+  .dayFight__video {
+    height: 36vw;
+    width: 50vw;
+  }
+  .dayFight__description {
+    top: 75%;
+    left: 50%;
+  }
+  .dayFight__h2 {
+    font-size: 30px;
+  }
+  .dayFight__text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 824px) and (orientation: landscape) {
+  .main__h1 {
+    padding-top: 100px;
+    padding-left: 80px;
+    font-size: 50px;
+  }
+  .main__h2 {
+    padding-top: 30px;
+    padding-left: 80px;
+    font-size: 20px;
+  }
+  .dayFight__video {
+    top: 80%;
+    left: 3%;
+    transform: translateY(-50%);
+  }
+  .dayFight__description {
+    width: 40%;
+    top: 80%;
+    right: 3%;
+    left: auto;
+    transform: translateY(-50%);
+  }
+  .dayFight__h2 {
+    font-size: 20px;
+  }
+  .dayFight__text {
+    font-size: 12px;
+  }
+}
+@media (max-width: 668px) and (orientation: landscape) {
+  .main__h1 {
+    font-size: 45px;
+  }
+  .main__h2 {
+    font-size: 18px;
+  }
+  .dayFight__h1 {
+    font-size: 28px;
+  }
+  .dayFight__h2 {
+    font-size: 18px;
+  }
+  .dayFight__text {
+    font-size: 11px;
+  }
+}
+@media (max-width: 569px) and (orientation: landscape) {
+  .main__h1 {
+    padding-top: 80px;
+    padding-left: 60px;
+    font-size: 40px;
+  }
+  .main__h2 {
+    padding-left: 60px;
+    font-size: 16px;
+  }
+  .dayFight__h1 {
+    font-size: 25px;
+  }
+  .dayFight__h2 {
+    font-size: 14px;
+  }
+  .dayFight__text {
+    font-size: 9px;
   }
 }

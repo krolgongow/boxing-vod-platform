@@ -28,7 +28,6 @@ const creatingPlayer = function () {
         `https://www.youtube-nocookie.com/embed/${links[index]}?autoplay=1`
       );
       overlay.classList.add("on");
-      // overlayVideo.insertAdjacentHTML("beforeend", html);
     });
   });
 };
